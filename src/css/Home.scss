@@ -1,0 +1,51 @@
+.mainBox{
+    padding: 20px 0px 0px 0px;
+    min-height: 400px;
+    .ant-carousel .slick-slide {
+        text-align: center;
+        height: 260px;
+        line-height: 260px;
+        background: #c0c1ee;
+        overflow: hidden;
+      }
+      
+      .ant-carousel .slick-slide h3 {
+        color: #fff;
+      }
+      .bottomContent{
+        padding: 20px 0 0 0;
+        background-color: #f9fafc;
+        height: 330px;
+        position: relative;
+        .leftContent{
+            float: left;
+            height: 310px;
+            background-color: #fff;
+            width: 100px;
+        }
+        .exerciseContent{
+            position: absolute;
+            left: 100px;
+        }
+        .rightContent{
+            float: right;
+            height: 310px;
+            background-color: #fff;
+            width: 350px;
+            position: relative;
+            .calender{
+                position: absolute;
+                width: 200px;
+                height: 230px;
+                background-color: #f2a55e;
+                top: 10px;
+                left: 80px;
+                text-align: center;
+                h3{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+  
