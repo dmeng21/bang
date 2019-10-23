@@ -47,9 +47,6 @@ function App() {
             <Route path="/study" component={StudyContainer} exact></Route>
           </div>
         </Content>
-        <Footer style={{ textAlign: "center" }}>
-          Ant Design ©2018 Created by Ant UED
-        </Footer>
       </Layout>
     </HashRouter>
   );

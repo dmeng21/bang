@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Carousel } from 'antd';
+import Calender from "../../common/calender"
 
 import "../../css/Home.scss";
 
@@ -23,7 +24,8 @@ export default class HomeContainer extends Component {
           <div className="exerciseContent">中间部分</div>
           <div className="rightContent">
             <div className="calender">
-              <div><h3>棒棒团学习日程表</h3></div>
+              <div className="title"><h3>棒棒团学习日程表</h3></div>
+              <div className="time"><Calender/></div>
             </div>
           </div>
         </div>

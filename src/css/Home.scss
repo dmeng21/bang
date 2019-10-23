@@ -15,11 +15,11 @@
       .bottomContent{
         padding: 20px 0 0 0;
         background-color: #f9fafc;
-        height: 330px;
+        height: 400px;
         position: relative;
         .leftContent{
             float: left;
-            height: 310px;
+            height: 380px;
             background-color: #fff;
             width: 100px;
         }
@@ -29,7 +29,7 @@
         }
         .rightContent{
             float: right;
-            height: 310px;
+            height: 380px;
             background-color: #fff;
             width: 350px;
             position: relative;
@@ -37,12 +37,20 @@
                 position: absolute;
                 width: 200px;
                 height: 230px;
-                background-color: #f2a55e;
+                //background-color: #bee6fd;
                 top: 10px;
                 left: 80px;
                 text-align: center;
+                .title{
+                    background-color: #f2a55e;
+                    width: 200px;
+                    height: 25px;
+                }
                 h3{
                     color: #fff;
+                }
+                .time{
+
                 }
             }
         }
