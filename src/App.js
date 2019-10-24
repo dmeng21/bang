@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { HashRouter, Route, Link } from "react-router-dom";
 import HomeContainer from "./components/home/HomeContainer";
 import StudyContainer from "./components/study/StudyContainer";
@@ -8,11 +8,13 @@ import "./App.scss";
 
 import { Layout, Menu } from "antd";
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
-function App() {
-  return (
-    <HashRouter>
+export default class App extends Component {
+
+  render (){
+    console.log(window.location.hash.split('/')[1])
+    return <HashRouter>
       <Layout className="layout">
         <Header className="layoutHeader">
           <div className="logo" />
@@ -22,13 +24,13 @@ function App() {
             <Menu
               theme="dark"
               mode="horizontal"
-              defaultSelectedKeys={["2"]}
+              defaultSelectedKeys={window.location.hash.split('/').length>1&&window.location.hash.split('/')[1]!==""?[window.location.hash.split('/')[1]]:["/"]}
               style={{ lineHeight: "64px"}}
             >
-              <Menu.Item key="1">
+              <Menu.Item key="/">
                 <Link to="/">首页</Link>
               </Menu.Item>
-              <Menu.Item key="2">
+              <Menu.Item key="study">
                 <Link to="/study">学习日记</Link>
               </Menu.Item>
               <Menu.Item key="3">组队CP</Menu.Item>
@@ -49,7 +51,5 @@ function App() {
         </Content>
       </Layout>
     </HashRouter>
-  );
+  }
 }
-
-export default App;

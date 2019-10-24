@@ -16,6 +16,22 @@ export default class UserInfo extends Component {
         >
           ∨
         </button>
+        <button           
+        style={{
+            border: "none",
+            backgroundColor: "#f2a55e",
+            cursor: "pointer",
+            height: "30px",
+            lineHeight: "30px",
+            width:"70px",
+            borderRadius:"20px",
+            marginLeft:"5px",
+            marginRight:"5px",
+            color:"#fff"
+          }}
+        >
+          写日记
+        </button>
         <button
           style={{
             border: "none",
@@ -27,6 +43,7 @@ export default class UserInfo extends Component {
         >
           [退出]
         </button>
+
       </div>
     );
   }

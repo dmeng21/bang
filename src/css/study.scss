@@ -1,0 +1,83 @@
+.studyMinbox{
+    position: relative;
+    background-color: #f7fbfe;
+    min-height: 680px;
+    .bgImage{
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        background-color: #868485;
+        z-index: 1;
+    }
+    .ClockInList{
+        position: absolute;
+        width: 700px;
+        height: 380px;
+        top: 280px;
+        left: 400px;
+        .list{
+            height: 120px;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 5px #ddd;
+            background-color: #fff;
+            .content{
+                width: 640px;
+                height: 120px;
+                float: right;
+                padding-top: 18px;;
+                ul li{
+                    list-style:none;
+                    span{
+                        height: 38px;
+                        font-size: 12px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                    h5{
+                        display: inline;
+                        padding-left: 10px;
+                    }
+                }
+            }
+            .image{
+                width: 30px;
+                height: 30px;
+                background-image: url("../image/userinfo.jpg");
+                background-size: 30px 30px;
+                border-radius: 50%;
+            }
+
+        }
+
+    }
+    .Clockin{
+        position: absolute;
+        padding: 10px;
+        width: 700px;
+        height: 200px;
+        left: 400px;
+        top: 60px;
+        z-index: 999;
+        background-color: #fff;
+        box-shadow: 0px 0px 5px #ddd;
+        .inputBox{
+            width: 680px;
+            height: 130px;
+            border: 1px solid #ddd;
+        }
+        button{
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            border: none;
+            background-color: #f2a55e;
+            border-radius: 20px;
+            float: right;
+            color: white;
+            margin-top: 10px;
+        }
+    }
+
+}

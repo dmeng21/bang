@@ -12,6 +12,7 @@ export default class Calender extends Component {
     this.state = {
       month: 0,
       year: 0,
+      day:0,
       currentDate: new Date()
     };
   }
@@ -21,9 +22,11 @@ export default class Calender extends Component {
   setCurrentMonth = (date) =>{
       var month = date.getMonth();
       var year = date.getFullYear();
+      var day = date.getDate();
       this.setState({
           month: month,
-          year: year
+          year: year,
+          day: day
       })
   }
   GetMonthDays = (month) => {
@@ -60,21 +63,26 @@ export default class Calender extends Component {
       var weekday = this.GetFirstDay();
       var monthDays = this.GetMonthDays(this.state.month);
     return (
-      <div>
+      <div className="mainCalenderBox">
+        <div className="currentDay">
+          <div className="span"></div>
+          <div className="date">{this.state.month+1}月{this.state.day }日<span>{this.state.year}</span></div>
+          
+        </div>
         <table className="table">
           <thead>
             <tr>
               {weekDay.map((week, key) => {
-                return <td>{week}</td>;
+                return <td key={key}>{week}</td>;
               })}
             </tr>
           </thead>
           <tbody>
             {LINES.map((week, key) => {
               return (
-                <tr>
+                <tr key={key}>
                   {weekDay.map((week, index) => {
-                    return <td style={{color: this.checkCurrentDay(key, index, monthDays, weekday)?"red":"#000"}}>
+                    return <td key={index} style={{color: this.checkCurrentDay(key, index, monthDays, weekday)?"red":"#000"}}>
                         {this.getDateText(key, index, monthDays, weekday)}
                     </td>;
                   })}
@@ -83,6 +91,16 @@ export default class Calender extends Component {
             })}
           </tbody>
         </table>
+        <div className="arrange">
+          <div className="span"></div>
+          <div className="currentArrange">今日安排</div>
+          <ul>
+            <li style={{backgroundColor:"#f2a55e", color:"#fff"}}>网易云音乐</li>
+            <li>python学习团</li>
+            <li>产品经理学习团</li>
+          </ul>
+          <div className="ercode"></div>
+        </div>
       </div>
     );
   }
